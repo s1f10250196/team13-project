@@ -23,3 +23,7 @@ nav a {
   border-radius: 4px;
   transition:  0.2s;
 }
+nav a:hover {
+  background: #f1f1f1;
+  border: 2px solid #f7caca;
+}
