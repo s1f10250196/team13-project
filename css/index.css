@@ -28,7 +28,6 @@ nav a {
   color: #000000;
   padding: 6px 14px;
   border-radius: 4px;
-  transition:  0.2s;
 }
 nav a:hover {
   background: #f1f1f1;
@@ -77,4 +76,23 @@ hr {
 .footer-bottom {
   text-align: center;
   font-size: 12px;
+}
+
+.sns-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sns-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  object-fit: cover;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.sns-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
