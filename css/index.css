@@ -15,13 +15,34 @@ header {
   padding: 20px 0 10px 0;
   border-bottom: 1px solid #000000;
 }
-
 nav ul {
   display: flex;
   justify-content: center;
   gap: 2em;
   list-style: none;
   margin-top: 10px;
+}
+.nav-list {
+  display: flex;
+  gap: 0; /* 縦線で区切るからgapは0に */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  position: relative; /* 疑似要素用 */
+}
+
+/* 2個目以降のliの左に縦線 */
+.nav-list li:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background: #ccc;
+  margin: 0 12px 0 0; /* 右に余白 */
+  vertical-align: middle;
 }
 nav a {
   text-decoration: none;
@@ -95,4 +116,14 @@ hr {
 .sns-icon:hover {
   transform: scale(1.1);
   opacity: 0.8;
+}
+
+.full-bg {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;      /* はみ出る部分はトリミング。画像が縮みすぎない！ */
+  display: block;         /* 横スクロール防止 */
+}
+body {
+  margin: 0;              /* ブラウザ標準の余白を消す */
 }
