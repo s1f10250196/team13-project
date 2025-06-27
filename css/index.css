@@ -6,6 +6,11 @@ body {
   background-color: #fff5e8;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 main {
   flex: 1;
 }
