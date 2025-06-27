@@ -41,7 +41,6 @@ nav ul {
   width: 1px;
   height: 22px;
   background: #ccc;
-  margin: 0 12px 0 0; /* 右に余白 */
   vertical-align: middle;
 }
 nav a {
