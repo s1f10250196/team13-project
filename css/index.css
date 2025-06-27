@@ -3,7 +3,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #f7c8a3;
 }
+
 main {
   flex: 1;
 }
@@ -54,48 +56,88 @@ nav a:hover {
   border-bottom: 2px solid #ffb648;
 }
 
+
+
 /*お問い合わせ*/
 .contact-container {
-    max-width: 600px; 
-    margin: 0 auto;   
-    padding: 2rem;
+    max-width: 800px; 
+    margin: 3rem auto; /* 上下に余白を追加して中央寄せ */
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .contact-container h2 {
-    font-size: 24px;
+    text-align: center; /* タイトルを中央寄せ */
+    font-size: 28px;
     margin-bottom: 1rem; 
 }
 
+.contact-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* 氏名とメールアドレスを横並びにする設定 */
+.form-row {
+    display: flex;
+    gap: 20px; /* 項目間のスペース */
+}
+.form-row .form-group {
+    flex: 1; /* 幅を均等に分ける */
+}
+
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-weight: normal; /* 太字を解除 */
+    color: #555;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;  
-    padding: 10px;              
-    border: 1px solid #ccc;      
-    border-radius: 4px;         
-    box-sizing: border-box;     
+    width: 100%;    
+    padding: 12px;                
+    border: 1px solid #dbece9;    
+    border-radius: 8px;           
+    box-sizing: border-box;
+    background-color: #fafffe;    
 }
 
+/* 入力欄を選択した時のスタイル */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b87f14;
+    box-shadow: 0 0 0 3px rgba(184, 118, 20, 0.2);
+}
+
+/* 送信ボタンを中央に配置 */
 .form-actions {
-    text-align: left; 
+    text-align: center; 
 }
 
+/* ボタンのデザイン */
 .form-actions button {
-    background-color: #e0e0e0;
-    color: #333;             
-    padding: 10px 20px;       
-    border: 1px solid #ccc;  
-    border-radius: 4px;      
-    cursor: pointer;         
+    background-color: #b87114; /* ボタンの背景色 */
+    color: #ffffff;            /* 文字色を白に */
+    padding: 12px 30px;        
+    border: none;              /* 枠線をなくす */
+    border-radius: 8px;        
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+/* ボタンにマウスを乗せた時の効果 */
+.form-actions button:hover {
+    background-color: #96500f;
 }
 
 /* ヘルプデスク部分のスタイル */
@@ -103,7 +145,11 @@ nav a:hover {
     margin-top: 2rem; 
     font-size: 14px;
     line-height: 1.6; 
+    text-align: center;
+    color: #777;
 }
+
+
 
 /*フッター*/
 footer {
