@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>メニュー項目</title>
+  <link rel="stylesheet" href="css/menu.breakfast.css">
+</head>
+<body>
+  <div class="card">
+    <div class="image-box"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR7ahjGHVTJplmvfFkr1kTNTcIzbs2FYi1TS1dlvEoaYRt0W67E75oBFJ4mZBSW1qc24QisTnQND88U9aRsD0hbzN06-k6B_9aataI_DV_WjAyI2Lx0OHLobCs0LnAB2e13Tp4v0YfRlOq/s800/character_food_gohan.png" alt="商品の画像"></div>
+    <div>～ほっこり和モーニング～</div>
+    <button class="down-btn" onclick="toggleDetail(this)">&#x0056;</button>
+    <div class="detail">
+      商品の詳細<br>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image-box"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR7ahjGHVTJplmvfFkr1kTNTcIzbs2FYi1TS1dlvEoaYRt0W67E75oBFJ4mZBSW1qc24QisTnQND88U9aRsD0hbzN06-k6B_9aataI_DV_WjAyI2Lx0OHLobCs0LnAB2e13Tp4v0YfRlOq/s800/character_food_gohan.png" alt="商品の画像"></div>
+    <div>～ブレッドモーニング～</div>
+    <button class="down-btn" onclick="toggleDetail(this)">&#x0056;</button>
+    <div class="detail">
+      商品の詳細<br>
+    </div>
+  </div>
+  <script>
+    function toggleDetail(btn) {
+      const card = btn.closest('.card');
+      card.classList.toggle('expanded');
+      const detail = card.querySelector('.detail');
+      // 展開したときだけスクロール
+      if(card.classList.contains('expanded')) {
+        setTimeout(() => {
+          detail.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }, 300); // アニメーション後にスクロール
+      }
+    }
+  </script>
+</body>
+</html>
