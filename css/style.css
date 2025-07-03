@@ -11,7 +11,7 @@ main h1 {
     text-align: center;
 }
 
-nav {
+nav2 {
     display: block;
     width: 220px;
     position: fixed;
@@ -24,27 +24,27 @@ nav {
     opacity: 0;
 }
 
-.open nav {
+.open nav2 {
     left: 0;
     opacity: 1;
 }
 
-nav .inner {
+nav2 .inner {
     padding: 25px;
 }
 
-nav .inner ul {
+nav2 .inner ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav .inner ul li {
+nav2 .inner ul li {
     margin: 0;
     border-bottom: 1px solid #333;
 }
 
-nav .inner ul li a {
+nav2 .inner ul li a {
     display: block;
     text-decoration: none;
     color: #333;
@@ -53,7 +53,7 @@ nav .inner ul li a {
     transition-duration: 0.2s;
 }
 
-nav .inner ul li a:hover {
+nav2 .inner ul li a:hover {
     background-color: #e4e4e4;
 }
 
