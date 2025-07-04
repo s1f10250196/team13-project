@@ -40,9 +40,43 @@
                 </ul>
             </nav>
         </header>
-        <img class="full-bg" src="images/salad.jpg" alt="画像1" />
-        <h1>チームで作成するWebサイトです</h1>
-        <p class = "red">内容はこれから書きます</p>
+<div id="hero-slideshow" class="slideshow-container">
+    <!-- スライドの画像をここにリストアップします -->
+    <div class="slide-background">
+        <img src="https://placehold.co/1920x1080/EFE4D8/333?text=Daily+Menu" alt="日替わりメニューのイメージ" class="slide-img active">
+        <img src="https://placehold.co/1920x1080/D8EFE4/333?text=New+Menu" alt="新メニューのイメージ" class="slide-img">
+        <img src="https://placehold.co/1920x1080/E4D8EF/333?text=Seasonal" alt="季節メニューのイメージ" class="slide-img">
+        <img src="https://placehold.co/1920x1080/EFEAD8/333?text=Information" alt="お知らせのイメージ" class="slide-img">
+    </div>
+
+    <!-- スライドのテキストコンテンツをここにリストアップします -->
+    <div class="slide-content">
+        <div class="slide-text active">
+            <h1>日替わりメニュー</h1>
+            <p>毎日心を込めて作る、特別な一皿</p>
+            <!-- ▼▼▼ ここのボタンを削除 ▼▼▼ -->
+        </div>
+        <div class="slide-text">
+            <h1>新メニュー登場</h1>
+            <p>シェフの自信作、ぜひご賞味ください</p>
+        </div>
+        <div class="slide-text">
+            <h1>季節の味覚</h1>
+            <p>旬の食材をふんだんに使った限定メニュー</p>
+        </div>
+        <div class="slide-text">
+            <h1>お知らせ</h1>
+            <p>営業時間やイベントのご案内</p>
+        </div>
+    </div>
+
+    <!-- スライドショーの操作ボタン -->
+    <button id="prevBtn" class="slider-nav prev">&lt;</button>
+    <button id="nextBtn" class="slider-nav next">&gt;</button>
+    
+    <!-- ▼▼▼ 新しく「詳しく見る」リンクをここに追加 ▼▼▼ -->
+    <a href="menyu.html" id="detailsLink" class="slide-details-link">詳しく見る</a>
+</div>
 
         <div id="Form-contact" class="contact-container">
             <h2>お問い合わせ</h2>

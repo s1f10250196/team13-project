@@ -62,6 +62,153 @@ nav a:hover {
 }
 
 
+/* ===============================================
+   スライドショー
+   =============================================== */
+.slideshow-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* 画像を暗くするためのオーバーレイ */
+.slideshow-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* ここの数値で暗さを調整 (0.0 ~ 1.0) */
+    z-index: 1; /* 画像の上、テキストの下に配置 */
+}
+
+/* 背景画像コンテナ */
+.slide-background {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide-img.active {
+    opacity: 1;
+}
+
+/* テキストコンテンツのコンテナ */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 90%;
+    z-index: 2; /* オーバーレイより手前に表示 */
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-text.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.slide-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-button {
+   display: none; /* 古いボタンは非表示に */
+}
+
+/* 左右のナビゲーションボタンのスタイル */
+.slider-nav {
+    position: absolute;
+    bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    top: auto;
+    transform: none;
+}
+
+.slider-nav:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.slider-nav.prev {
+    left: calc(50% - 45px); 
+}
+
+.slider-nav.next {
+    left: calc(50% + 5px);
+}
+
+/* ▼▼▼ 「詳しく見る」リンクのスタイルを修正 ▼▼▼ */
+.slide-details-link {
+    position: absolute;
+    bottom: 40px; /* ナビゲーションボタンと高さを合わせる */
+    left: calc(50% + 90px); /* 「次へ」ボタンからさらに離して右側に配置 */
+    z-index: 10;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid #ffb648;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.slide-details-link:hover {
+    color: #ffb648;
+    border-color: white;
+}
+
+/* full-bgクラスは不要になるので削除してもOK */
+.full-bg {
+    display: none;
+}
+
+
+
 
 /*お問い合わせ*/
 .contact-container {
